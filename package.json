@@ -8,6 +8,7 @@
  },
  "dependencies":{
   "discord.js": "11.3.2",
+  "datejs": "1.0.0-rc3",
   "request": "2.81.0",
   "ascii-art": "1.4.3",
   "chalk": "2.3.2"
