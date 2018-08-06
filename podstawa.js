@@ -6,7 +6,7 @@ var settings = {
 	"dateFormat": "dddd, MMMM dS, yyyy", //format daty do komendy date
 	"sayFont": "Doom", //czcionka do say
 	"botToken": "NDM0NDA2MTQ2NTE4OTQxNzA2.DbKkYw.aN87MNXEnqLltpRQmu00fnLMwwg", //wklej tutaj token do bota
-	"streamingText": "Capabilities SAMP", //tekst na statusie
+	"streamingText": "Lepszy od dynobota", //tekst na statusie
 };
 
 var Discord = require('discord.js');
