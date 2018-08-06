@@ -226,4 +226,4 @@ bot.on("message", function(message){
 	
 });
 
-bot.login(settings.botToken);
+bot.login(process.env.BOT_TOKEN);
