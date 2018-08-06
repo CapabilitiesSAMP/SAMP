@@ -185,13 +185,15 @@ bot.on("message", function(message){
 	}
 	
 	if(c("say")){
-		if(input){
-			ascii.font(input, settings.sayFont, function(say){
-				msg.channel.send("```fix\n"+say+"\n```");
-			});
-		} else {
-			msg.channel.send("Usage: "+prefix+"say <text>");
-		}
+		    if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
+				return false;
+			if(input){
+				ascii.font(input, settings.sayFont, function(say){
+					msg.channel.send("```fix\n"+say+"\n```");
+				});
+			} else {
+				msg.channel.send("Usage: "+prefix+"say <text>");
+			}
 	}
 	
 	if(c("animate")){
