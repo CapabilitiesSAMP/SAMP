@@ -185,26 +185,25 @@ bot.on("message", function(message){
 		});
 	}
 	
-	if(c("ban"))
-	{
+	  if(command === "ban") {
 	    // Most of this command is identical to kick, except that here we'll only let admins do it.
 	    // In the real world mods could ban too, but this is just an example, right? ;)
 	    if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
-	      return message.reply("Brak uprawnień.");
+	      return message.reply("Sorry, you don't have permissions to use this!");
 
 	    let member = message.mentions.members.first();
 	    if(!member)
-	      return false;
+	      return message.reply("Please mention a valid member of this server");
 	    if(!member.bannable) 
-	      return false;
+	      return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
 
 	    let reason = args.slice(1).join(' ');
-	    if(!reason) reason = "Brak powodu.";
+	    if(!reason) reason = "No reason provided";
 
 	    await member.ban(reason)
 	      .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-	    message.reply(`${member.user.tag} został zbanowany przez ${message.author.tag} powód: ${reason}`);
-	 }
+	    message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+	  }
 	
 	if(c("say")){
 		    if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
