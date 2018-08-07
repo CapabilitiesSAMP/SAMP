@@ -185,7 +185,7 @@ bot.on("message", function(message){
 		});
 	}
 	
-	  if(command === "ban") {
+	 if(c("ban")){
 	    // Most of this command is identical to kick, except that here we'll only let admins do it.
 	    // In the real world mods could ban too, but this is just an example, right? ;)
 	    if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
