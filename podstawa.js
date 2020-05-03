@@ -6,12 +6,12 @@ var settings = {
 	"dateFormat": "dddd, MMMM dS, yyyy", //format daty do komendy date
 	"sayFont": "Doom", //czcionka do say
 	"botToken": "", //wklej tutaj token do bota
-	"streamingText": "Lepszy od dynobota", //tekst na statusie
+	"streamingText": "Drunk Stream", //tekst na statusie
 };
 
 var Discord = require('discord.js');
 var bot = new Discord.Client({autoReconnect:true});
-var prefix = "."; //zmien prefix jak chcesz
+var prefix = "!"; //zmien prefix jak chcesz
 var datejs = require('datejs');
 var fs = require('fs');
 var ascii = require('ascii-art');
@@ -30,7 +30,7 @@ function logWarn(s){
 bot.on("ready", function(){
 	process.stdout.write('\033c');
 	logOK("Bot started and ready.");
-	<client>.user.setActivity('<activity>', { type: 'WATCHING' });/status, streamuje
+	bot.user.setPresence({ game: { name: settings.streamingText, url: "https://www.twitch.tv/streamerhouse" , type: "STREAMING" }}); //status, streamuje
 });
 var users = {
 	"263008481999585281":{
