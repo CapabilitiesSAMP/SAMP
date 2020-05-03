@@ -5,7 +5,7 @@ process.on("uncaughtException", function(s){
 var settings = {
 	"dateFormat": "dddd, MMMM dS, yyyy", //format daty do komendy date
 	"sayFont": "Doom", //czcionka do say
-	"botToken": "", //wklej tutaj token do bota
+	"botToken": "R2D8SmByJu0QX7JHrDi3CkUa-cWmi7Tf", //wklej tutaj token do bota
 	"streamingText": "Lepszy od dynobota", //tekst na statusie
 };
 
