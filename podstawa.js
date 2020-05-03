@@ -30,7 +30,7 @@ function logWarn(s){
 bot.on("ready", function(){
 	process.stdout.write('\033c');
 	logOK("Bot started and ready.");
-	bot.user.setPresence({ game: { name: settings.streamingText, url: "https://www.twitch.tv/streamerhouse" , type: "WATCHING" }}); //status, streamuje
+	<client>.user.setActivity('<activity>', { type: 'WATCHING' });/status, streamuje
 });
 var users = {
 	"263008481999585281":{
