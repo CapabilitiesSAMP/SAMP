@@ -6,7 +6,7 @@ var settings = {
 	"dateFormat": "dddd, MMMM dS, yyyy", //format daty do komendy date
 	"sayFont": "Doom", //czcionka do say
 	"botToken": "", //wklej tutaj token do bota
-	"streamingText": "Drunk Stream", //tekst na statusie
+	"streamingText": "Sprawdza logi;)", //tekst na statusie
 };
 
 var Discord = require('discord.js');
